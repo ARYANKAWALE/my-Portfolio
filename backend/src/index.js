@@ -1,24 +1,20 @@
-import express from "express"
-import dotenv from "dotenv"
-import {app} from "./app.js"
-import connectDB from "./db/index.js"
+import dotenv from "dotenv";
+import { app } from "./app.js";
+import connectDB from "./db/index.js";
 
 dotenv.config({
-    path:'./.env'
-})
-
-// const port = 3000
+  path: "./.env",
+});
 
 connectDB()
-
-.then(()=>{ 
+  .then(() => {
     app.listen(process.env.PORT, () => {
-        console.log(`Server listening on port ${process.env.PORT}`)
-    })
-})
-.catch((err)=>{
-    console.log(err)
-})
+      console.log(`⚙️ Server listening on port ${process.env.PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
