@@ -1,5 +1,5 @@
 import { Message } from "./models/Message.models.js";
-import { ApiError } from "../utils/apiError.js";
+import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 
 const message = asyncHandler(async (req, res) => {
@@ -25,3 +25,5 @@ const message = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, "Message send SuccessFully"));
 });
+
+export { message };

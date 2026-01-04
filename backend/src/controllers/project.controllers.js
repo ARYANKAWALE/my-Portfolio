@@ -1,5 +1,5 @@
 import { Project } from "../models/project.models.js";
-import { ApiError } from "../utils/apiError.js";
+import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 
 const getAllProjects = asyncHandler(async (req, res) => {
